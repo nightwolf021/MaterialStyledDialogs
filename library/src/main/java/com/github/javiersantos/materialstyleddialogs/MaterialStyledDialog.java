@@ -27,13 +27,13 @@ import com.github.javiersantos.materialstyleddialogs.enums.Duration;
 import com.github.javiersantos.materialstyleddialogs.enums.Style;
 
 public class MaterialStyledDialog extends DialogBase {
-    protected final Builder mBuilder;
+    final Builder mBuilder;
 
     public final Builder getBuilder() {
         return mBuilder;
     }
 
-    protected MaterialStyledDialog(Builder builder) {
+    MaterialStyledDialog(Builder builder) {
         super(builder.context, R.style.MD_Dark);
         mBuilder = builder;
         mBuilder.dialog = initMaterialStyledDialog(builder);
@@ -191,24 +191,24 @@ public class MaterialStyledDialog extends DialogBase {
     }
 
     public static class Builder implements IBuilder {
-        protected Context context;
+         Context context;
 
         // build() and show()
-        protected MaterialDialog dialog;
+         MaterialDialog dialog;
 
-        protected Style style; // setStyle()
-        protected Duration duration; // withDialogAnimation()
-        protected boolean isIconAnimation, isDialogAnimation, isDialogDivider, isCancelable, isScrollable, isDarkerOverlay, isAutoDismiss; // withIconAnimation(), withDialogAnimation(), withDivider(), setCancelable(), setScrollable(), withDarkerOverlay(), autoDismiss()
-        protected Drawable headerDrawable, iconDrawable; // setHeaderDrawable(), setIconDrawable()
-        protected Integer primaryColor, maxLines; // setHeaderColor(), setScrollable()
-        protected CharSequence title, description; // setTitle(), setDescription()
-        protected View customView; // setCustomView()
-        protected int customViewPaddingLeft, customViewPaddingTop, customViewPaddingRight, customViewPaddingBottom;
-        protected AppCompatImageView.ScaleType headerScaleType;
+         Style style; // setStyle()
+         Duration duration; // withDialogAnimation()
+         boolean isIconAnimation, isDialogAnimation, isDialogDivider, isCancelable, isScrollable, isDarkerOverlay, isAutoDismiss; // withIconAnimation(), withDialogAnimation(), withDivider(), setCancelable(), setScrollable(), withDarkerOverlay(), autoDismiss()
+         Drawable headerDrawable, iconDrawable; // setHeaderDrawable(), setIconDrawable()
+         Integer primaryColor, maxLines; // setHeaderColor(), setScrollable()
+         CharSequence title, description; // setTitle(), setDescription()
+         View customView; // setCustomView()
+         int customViewPaddingLeft, customViewPaddingTop, customViewPaddingRight, customViewPaddingBottom;
+         AppCompatImageView.ScaleType headerScaleType;
 
         // .setPositive(), setNegative() and setNeutral()
-        protected CharSequence positive, negative, neutral;
-        protected MaterialDialog.SingleButtonCallback positiveCallback, negativeCallback, neutralCallback;
+         CharSequence positive, negative, neutral;
+         MaterialDialog.SingleButtonCallback positiveCallback, negativeCallback, neutralCallback;
 
         public Builder(Context context) {
             this.context = context;
