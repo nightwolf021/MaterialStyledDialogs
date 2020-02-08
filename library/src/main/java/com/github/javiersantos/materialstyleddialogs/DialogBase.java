@@ -11,7 +11,7 @@ import com.afollestad.materialdialogs.internal.MDRootLayout;
 
 class DialogBase extends Dialog implements DialogInterface.OnShowListener {
 
-    protected MDRootLayout view;
+    MDRootLayout view;
     private OnShowListener showListener;
 
     DialogBase(Context context, int theme) {
