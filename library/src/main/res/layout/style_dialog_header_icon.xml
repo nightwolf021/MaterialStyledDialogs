@@ -34,7 +34,10 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="-1dp"
                 android:layout_marginBottom="5dp"
-                android:gravity="start" />
+                android:gravity="start"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -42,7 +45,8 @@
 
             android:id="@+id/md_styled_dialog_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
 
     <ScrollView
             android:layout_width="match_parent"
